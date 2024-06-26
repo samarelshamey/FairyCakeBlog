@@ -1,0 +1,29 @@
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #6c757d;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+.invalid-feedback {
+    color: #dc3545;
+}
+
+.form-group {
+    margin-bottom: 10px; 
+}
+
+.form-group.submit-group {
+    margin-top: 10px; 
+}

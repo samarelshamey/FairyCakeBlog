@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<div class="media-grid">
+    {% for post in posts.items %}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pic/' + post.author.image_file)}}">
+                <a class="mr-2" href="{{ url_for('users.user_posts', firstname=post.author.firstname )}}">{{ post.author.firstname | capitalize }}{{ post.author.lastname | capitalize }}</a>
+                <small class="text-muted">{{ post.date_created.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title | capitalize}}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+<div class="pagination-links">
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
+            {% if posts.page == page_num %}
+                <a class="current-page" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+            <a href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+        {% else %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}

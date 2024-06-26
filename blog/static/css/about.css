@@ -1,0 +1,40 @@
+
+.about-section {
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 0rem;
+}
+
+.about-content {
+    font-family: "Playwrite NZ", cursive;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-img {
+    text-align: center; 
+    margin-top: 20px;
+    max-width: 50%; 
+    height: auto;
+    margin-bottom: 20px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.playwrite-nz {
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}

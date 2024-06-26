@@ -1,0 +1,248 @@
+/**body style*/
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  /*headline style*/
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #ffffff;
+  }
+  /*navbar style*/
+  .site-header .navbar-brand {
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .navbar {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #000000;
+  }
+  .site-header .navbar-nav {
+    margin-top: 1.5rem;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    margin: 0 0px;
+    padding: 5px 5px;
+  
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #fff7f7;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  /*content section style*/
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  /*post style*/
+  .article-title {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Playwrite NZ", cursive;
+    font-size: 18px;
+  }
+  
+  .article-title:hover {
+    color: #428bca;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-content {
+    font-size: 12px;
+    white-space: pre-line; 
+    color: #6c757d;
+    margin-right: 10px;
+    font-family: "Lato", sans-serif;
+  }
+  
+  
+  .article-metadata {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  .article-metadata a {
+    color: #007bff; 
+    text-decoration: none; 
+  }
+  
+  .article-metadata a:hover {
+    color: #0056b3; 
+    text-decoration: none; 
+  }
+  
+  .article-svg {
+    width: 25px; 
+    height: 25px; 
+    vertical-align: middle;
+  }
+  
+  .mr-2 {
+    font-size: 14px; 
+    font-family: 'Times New Roman', serif; 
+    color: #666; 
+  }
+  
+  .text-muted {
+    font-size: 14px; 
+    font-family: 'Times New Roman', serif; 
+    color: #666; 
+  }
+  .playwrite-nz {
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+  /* font style */
+  .dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  /* profile picture style */
+  .account-img {
+    flex-shrink: 0;
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .media {
+    display: flex;
+    align-items: center;
+  }
+  
+  .media-body {
+    flex-grow: 1; 
+  }
+  
+  /* profile picture + button */
+  .position-relative {
+    position: relative;
+  }
+  
+  .position-absolute {
+    position: absolute;
+  }
+  
+  .top-0 {
+    top: 0;
+  }
+  
+  .end-0 {
+    right: 0;
+  }
+  
+  .change-img-btn {
+    background-color: #ffffff;
+    color: #1b1a1a;
+    font-size: 1.5rem;
+    padding: 10px; 
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  .card {
+    border: none;
+  }
+  
+  .card-title {
+    color: #333;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #6c757d;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  
+  .change-img-btn:hover {
+    background-color: #151616;
+    color: #ffffff;
+  }
+  
+  legend.border-bottom {
+    margin-bottom: 0.5rem;
+    margin-top: -2rem;
+    padding-bottom: 0.5rem;
+  }
+  

@@ -1,0 +1,91 @@
+.account-img {
+    flex-shrink: 0;
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.content-section {
+    margin-top: 20px;
+}
+
+.account-heading {
+    font-size: 2rem;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+}
+
+.media-body {
+    flex-grow: 1; 
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.end-0 {
+    right: 0;
+}
+
+.change-img-btn {
+    background-color: #ffffff;
+    color: #1b1a1a;
+    font-size: 1.5rem;
+    padding: 10px; 
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.change-img-btn:hover {
+    background-color: #151616;
+    color: #ffffff;
+}
+
+legend.border-bottom {
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+    padding-bottom: 0.5rem;
+}
+
+.btn-outline-info {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn-outline-info:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    color: #ffffff;
+}
+
+.btn-outline-info:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255, 255, 255);
+}
+
+.btn-outline-info {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
