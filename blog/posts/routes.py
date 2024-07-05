@@ -4,6 +4,11 @@ from flask_login import current_user, login_required
 from blog import db
 from blog.models import Post
 from blog.posts.forms import PostForm
+from blog.users.utils import allowed_file
+from werkzeug.utils import secure_filename
+import os
+from flask import current_app
+
 
 posts = Blueprint('posts', __name__)
 
@@ -24,6 +29,24 @@ def new_post():
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
+
+# @posts.route('/upload', methods=['POST'])
+# @login_required
+# def upload_file():
+#     if 'file' not in request.files:
+#         flash('No file part')
+#         return redirect(url_for('main.home'))
+#     file = request.files['file']
+#     if file.filename == '':
+#         flash('No selected file')
+#         return redirect(url_for('main.home'))
+#     if file and allowed_file(file.filename):
+#         filename = secure_filename(file.filename)
+#         file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+#         return redirect(url_for('uploaded_file',
+#                                 filename=filename))
+#     return 'File upload failed!'
+
 
 @posts.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required

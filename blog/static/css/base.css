@@ -4,6 +4,12 @@ body {
   color: #333333;
   margin-top: 5rem;
 }
+.container {
+  width: 100%; 
+  max-width: 100%;
+  padding: 0 15px; 
+  margin: 0 auto; 
+}
 
 /*headline style*/
 h1, h2, h3, h4, h5, h6 {
@@ -25,9 +31,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Adjust z-index as needed */
-  background-color: #ffffff; /* Adjust background color */
-  border-bottom: 1px solid #000000; /* Optional: Add border if needed */
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
 }
 
 .site-header .navbar-nav {
@@ -50,8 +56,6 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
-
-/* font style */
 .dancing-script {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;

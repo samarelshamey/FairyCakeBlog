@@ -88,4 +88,15 @@ legend.border-bottom {
     color: #ffffff;
 }
 
+.form-group {
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
 
+}
+
+.form-control {
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+    padding: 10px;
+    width: 80%;
+}

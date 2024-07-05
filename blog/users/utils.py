@@ -5,6 +5,8 @@ from flask_mail import Message
 from flask import url_for, current_app
 from blog import mail
 
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
 def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_picture.filename)
@@ -27,3 +29,9 @@ def send_reset_email(user):
 If you didn't make this request then simply ignore this email
 '''
     mail.send(msg)
+
+def allowed_file(filename):
+    return '.' in filename and \
+        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
