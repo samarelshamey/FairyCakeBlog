@@ -32,3 +32,12 @@
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+
+.form-group .form-control-file {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -91,3 +91,9 @@
 .btn-secondary:focus {
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+
+.img-fluid {
+    width: 380px; 
+    height: 500px; 
+    object-fit: cover; 
+}

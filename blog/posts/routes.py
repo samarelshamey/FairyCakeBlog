@@ -12,12 +12,13 @@ from flask import current_app
 
 posts = Blueprint('posts', __name__)
 
+
 @posts.route("/post/new", methods=['GET', 'POST'])
 @login_required
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        post = Post(title=form.title.data, content=form.content.data, author=current_user, post_image_file=form.image.data)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
@@ -25,27 +26,11 @@ def new_post():
     return render_template('create_post.html', title='New Post',
                             form=form, legend='New Post')
 
+
 @posts.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
-
-# @posts.route('/upload', methods=['POST'])
-# @login_required
-# def upload_file():
-#     if 'file' not in request.files:
-#         flash('No file part')
-#         return redirect(url_for('main.home'))
-#     file = request.files['file']
-#     if file.filename == '':
-#         flash('No selected file')
-#         return redirect(url_for('main.home'))
-#     if file and allowed_file(file.filename):
-#         filename = secure_filename(file.filename)
-#         file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
-#         return redirect(url_for('uploaded_file',
-#                                 filename=filename))
-#     return 'File upload failed!'
 
 
 @posts.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
@@ -58,6 +43,7 @@ def update_post(post_id):
     if form.validate_on_submit():
         post.title = form.title.data
         post.content = form.content.data
+        post.post_image_file = form.image.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
         return redirect(url_for('posts.post', post_id=post.id))

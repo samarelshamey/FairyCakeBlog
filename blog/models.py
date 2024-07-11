@@ -1,4 +1,4 @@
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous.url_safe import URLSafeTimedSerializer as Serializer
 from sqlalchemy import func
 from datetime import datetime
 from blog import db, login_manager
@@ -41,7 +41,7 @@ class Post(db.Model):
     date_created = db.Column(db.DateTime, nullable=False, default=func.now())
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    # post_image_file = db.Column(db.String(20), nullable=True)
+    post_image_file = db.Column(db.String(100), nullable=False,  default='post_default.jpg')
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_created}', '{self.post_image_file}')"

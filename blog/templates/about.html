@@ -2,17 +2,18 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <section class="about-section">
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='images/about.jpg')}}" alt="Fairy Cake Blog Image">
+        </div>
         <div class="about-content">
             <h1>About Fairy Cake Blog</h1>
-            <p>Welcome to Fairy Cake Blog, your go-to resource for everything related to pastries and cakes! Whether you're a baking enthusiast, a professional pastry chef, or simply someone with a sweet tooth, you'll find something delightful here.</p>
+            <p>Welcome to Fairy Cake Blog, Becasue every cake has a story! your go-to resource for everything related to pastries and cakes! Whether you're a baking enthusiast, a professional pastry chef, or simply someone with a sweet tooth, you'll find something delightful here.</p>
 
             <p>Explore a variety of mouthwatering recipes, from classic cakes to innovative desserts. We believe that baking is more than just a culinary art—it's a joyful experience that brings people together and creates lasting memories.</p>
 
             <p>Join our community of pastry lovers as we celebrate the magic of baking and share our passion for creating delicious treats. Get inspired, learn new techniques, and embark on your own baking adventures with us!</p>
             <p>Join us today! <a href="{{ url_for('users.register') }}">Join Today</a></p>
         </div>
-        <div class="about-img">
-            <img src="{{ url_for('static', filename='images/about.jpg')}}" alt="Fairy Cake Blog Image">
-        </div>
+        
     </section>
 {% endblock %}

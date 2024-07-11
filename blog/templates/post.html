@@ -4,9 +4,6 @@
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
-                <!-- {% if post.post_image_file %}
-                <img src="{{ url_for('static', filename='uploads/' + post.post_image_file) }}" class="img-fluid">
-                {% endif %} -->
                 <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pic/' + post.author.image_file)}}">
                 <a class="mr-2" href="{{ url_for('users.user_posts', firstname=post.author.firstname )}}">{{ post.author.firstname | capitalize }}{{ post.author.lastname | capitalize }}</a>
                 <small class="text-muted">{{ post.date_created.strftime('%Y-%m-%d') }}</small>
@@ -17,8 +14,11 @@
                     </div>
                 {% endif %}
             </div>
+            {% if post.post_image_file %}
+                <img src="{{ url_for('static', filename='profile_pic/' + post.post_image_file) }}" class="img-fluid">
+            {% endif %}
             <h2 class="article-title">{{ post.title | capitalize}}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+            <p>{{ post.content }}</p>
         </div>
     </article>
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -42,4 +42,5 @@
             </div>
         </div>
     </div>
+
 {% endblock content %}
