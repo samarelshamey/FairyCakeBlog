@@ -14,8 +14,11 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image" href="{{ url_for('static', filename='profile_pic/favicon.png') }}">
 
-    <title>Fairy Cake{% if title %} - {{ title }}{% endif %}</title>
+    <title>{% block title %}Fairy Cake Blog{% if title %} - {{ title }}{% endif %}{% endblock %}</title>
+    
     
 </head>
 <body>

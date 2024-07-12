@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+
+{% block title %}
+    {% if current_user.is_authenticated and current_user == user %}
+        My Posts | Fairy Cake Blog
+    {% else %}
+        {{ user.firstname | capitalize }} {{ user.lastname | capitalize}} Posts
+    {% endif %}
+{% endblock %}
+
 {% block content %}
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 
     {% for post in posts.items %}
