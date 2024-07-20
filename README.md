@@ -77,3 +77,5 @@ Contributions are welcome! Please follow these steps:
 - [Samar Elshamy](https://github.com/samarelshamey) - Developer
 
 ---
+
+👉 Check out the project: [Fairy Cake Blog](http://www.fairycakeblog.social/landingpage)
