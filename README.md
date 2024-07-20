@@ -1,7 +1,7 @@
 <h1 align="center">Fairy Cake Blog</h1>
 
 <p align="center">
-  <img src="http://www.fairycakeblog.social/landingpage" alt="Logo">
+  <img src="{{ url_for('static', filename='images/LandingPage.jpg')}}" alt="Logo">
 </p>
 
 <p align="center">
