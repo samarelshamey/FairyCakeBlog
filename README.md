@@ -1,10 +1,6 @@
 <h1 align="center">Fairy Cake Blog</h1>
 
 <p align="center">
-  <img src="{{ url_for('static', filename='images/about.jpg')}}" alt="Landing Page">
-</p>
-
-<p align="center">
   A blog website for cake enthusiasts, built with Python, Flask, and SQLAlchemy.
 </p>
 
