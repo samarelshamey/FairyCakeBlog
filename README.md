@@ -43,18 +43,18 @@
 ## Installation
 
 1. Clone the repository: 
-    git clone https://github.com/samarelshamey/FairyCakeBlog.git
+    - git clone https://github.com/samarelshamey/FairyCakeBlog.git
 2. Create a virtual environment and activate it: 
-    python -m venv venv
-    source venv/bin/activate (on Windows use venv\Scripts\activate)
+    - python -m venv venv
+    - source venv/bin/activate (on Windows use venv\Scripts\activate)
 3. Install dependencies:
-    pip install -r requirements.txt
+    - pip install -r requirements.txt
 4. Set up the database:
-    flask db init
-    flask db migrate -m "Initial migration"
-    flask db upgrade
+    - flask db init
+    - flask db migrate -m "Initial migration"
+    - flask db upgrade
 5. Run the application:
-    flask run
+    - flask run
 6. Open your browser and go to `http://localhost:5000` to view the website.
 
 ## Usage
