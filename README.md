@@ -14,8 +14,6 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Authors](#authors)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
